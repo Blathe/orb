@@ -8,6 +8,7 @@ Orb is an extremely quick and simple template for getting something up and runni
 
 - Basic landing page
 - Sign Up and Sign In using Clerk components
+- Dark mode toggle
 
 
 ## Deployment
