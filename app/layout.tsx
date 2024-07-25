@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,8 +33,15 @@ export default function RootLayout({
             fontSans.variable
           )}
         >
-          <Header />
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
